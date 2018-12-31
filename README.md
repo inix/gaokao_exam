@@ -16,7 +16,8 @@ MacOS: 下载MacTex并安装 [MacTex](https://www.tug.org/mactex/)。
 
 安装完成之后，使用`TexWorks`打开`.tex`文件，并使用`XeLatex`编译，编译成功就可以看到渲染结果。
 
-## _把相关sty文件添加到Texlive搜索目录中(可选)
+## 把相关sty文件添加到Texlive搜索目录中(可选)
+这一步可以不用进行，但是应该保证 sty文件和tex文件在同一个目录。
 
 如果你用Windows 10，你的Texlive目录应该为 `C:/Users/stefan/texmf`：
 ```bash
