@@ -9,9 +9,30 @@ Windows系统: 下载并安装 [Texlive windows](http://mirror.ctan.org/systems/
 
 MacOS: 下载MacTex并安装 [MacTex](https://www.tug.org/mactex/)。
 
+## 安装相关字体
+`NEMT.sty`文件里面使用了很多方正字体，请自行到百度搜索并安装，请注意字体可能有版权。
+
 ## 用TexWorks打开并使用 XeLatex编译
 
 安装完成之后，使用`TexWorks`打开`.tex`文件，并使用`XeLatex`编译，编译成功便看到渲染结果。
+
+## 把相关sty文件添加到Texlive搜索目录中
+
+如果你用Windows 10，你的Texlive目录应该为 `C:/Users/stefan/texmf`：
+```bash
+创建目录结构：  C:/Users/stefan/texmf/tex/latex/exam
+把文件 NEMT.sty variant.sty复制到 C:/Users/stefan/texmf/tex/latex/exam
+```
+这样，就可以在各`tex`文件里使用 `\usepackage{NEMT}`了。
+
+其他系统，请使用如下方法获取搜索目录：
+```bash
+kpsewhich -var-value=TEXMFHOME
+```
+添加sty文件之后，使用如下命令查看是否生效：
+```bash
+kpsewhich NEMT.sty
+```
 
 # 试卷排版改进指南
 ## 表格
