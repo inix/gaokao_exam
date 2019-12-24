@@ -5,9 +5,8 @@
 # 使用方式
 ## 安装TexLive
 
-Windows系统: 下载并安装 [Texlive windows](http://mirror.ctan.org/systems/texlive/tlnet/install-tl-windows.exe)；
-
-MacOS: 下载MacTex并安装 [MacTex](https://www.tug.org/mactex/)。
+支持Windows，Linux和MacOS（https://www.tug.org/texlive/）。
+尽量用TexLive，不要使用其他发行版，比如MikTex等。
 
 ## 安装相关字体
 `NEMT.sty`文件里面使用了很多方正字体，请自行到百度搜索并安装，请注意字体可能有版权。
