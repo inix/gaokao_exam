@@ -18,7 +18,7 @@
 ## 把相关sty文件添加到Texlive搜索目录中(可选)
 这一步是为了保证能够搜索到`NEMT.sty`等自定义文件。
 查看`TEXMFHOME`具体位置:
-打开命令行提示符（Windows的cmd.exe）或者终端（Linux的Terminal），输入以下命令：
+打开命令行提示符（Windows的cmd.exe）或者终端（Linux或者MacOS的Terminal），输入以下命令：
 ```bash
 kpsewhich -var-value=TEXMFHOME
 ```
