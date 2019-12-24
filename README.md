@@ -22,7 +22,7 @@
 ```bash
 kpsewhich -var-value=TEXMFHOME
 ```
-例如，Windows将会输出：
+例如，Windows平台：
 ```bash
 C:\Users\stefan>kpsewhich -var-value=TEXMFHOME
 C:/Users/stefan/texmf
