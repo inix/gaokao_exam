@@ -13,23 +13,28 @@
 
 ## 用TexWorks打开并使用 XeLatex编译
 
-安装完成之后，使用`TexWorks`打开`.tex`文件，并使用`XeLatex`编译，编译成功就可以看到渲染结果。
+安装完成之后，使用自带的`TexWorks`打开`.tex`文件，并使用`XeLatex`编译，编译成功就可以看到渲染结果。
 
 ## 把相关sty文件添加到Texlive搜索目录中(可选)
-这一步可以不用进行，但是应该保证 sty文件和tex文件在同一个目录。
-
-如果你用Windows 10，你的Texlive目录应该为 `C:/Users/stefan/texmf`：
+这一步是为了保证能够搜索到`NEMT.sty`等自定义文件。
+查看`TEXMFHOME`具体位置:
+打开命令行提示符（Windows的cmd.exe）或者终端（Linux的Terminal），输入以下命令：
+```bash
+kpsewhich -var-value=TEXMFHOME
+```
+例如，Windows将会输出：
+```bash
+C:\Users\stefan>kpsewhich -var-value=TEXMFHOME
+C:/Users/stefan/texmf
+```
+把`NEMT.sty`和`varint.sty`放入`TEXMFHOME`，步骤如下：
 ```bash
 创建目录结构：  C:/Users/stefan/texmf/tex/latex/exam
 把文件 NEMT.sty variant.sty复制到 C:/Users/stefan/texmf/tex/latex/exam
 ```
 这样，就可以在各`tex`文件里使用 `\usepackage{NEMT}`了。
 
-其他系统，请使用如下方法获取搜索目录：
-```bash
-kpsewhich -var-value=TEXMFHOME
-```
-添加sty文件之后，使用如下命令查看是否生效：
+添加sty文件之后，使用如下命令查看自定义包是否能够被找到（终端执行命令）：
 ```bash
 kpsewhich NEMT.sty
 ```
